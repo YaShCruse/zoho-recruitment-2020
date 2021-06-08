@@ -1,0 +1,33 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void printPattern(String str,int n){
+
+        for (int i = 0; i < n; i++) {
+            int k=n/2;
+            for (int j = 0; j < n+1; j++) {
+                if(j<n-i)
+                    System.out.print(" ");
+                else {
+                    if(k==str.length())
+                        k=0;
+                    System.out.print(str.charAt(k++));
+                }
+
+            }
+            System.out.println();
+
+        }
+    }
+
+    public static void main(String[] args) {
+//       String str="welcome";
+//       String str2="water";
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
+        int n=str.length();
+        printPattern(str,n);
+    }
+}
